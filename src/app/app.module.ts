@@ -6,16 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
-import { EmployeesComponent } from './components/employees/employees.component';
-import { EmployeeComponent } from './components/employee/employee.component';
+import { TableEmployeeComponent } from './components/table-employee/table-employee.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    EmployeesComponent,
-    EmployeeComponent
+    TableEmployeeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 export interface Employee {
     id: number;
-    name: string;
-    salary: number;
-    anualSalary: number;
-    age: number;
+    employeeName: string;
+    employeeSalary: number;
+    employeeAnualSalary: number;
+    employeeAge: number;
     profileImage?: string;
 }

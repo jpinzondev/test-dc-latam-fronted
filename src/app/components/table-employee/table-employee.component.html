@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Anual Salary</th>
+        <th scope="col">Age</th>
+        <th scope="col">Avantar</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of listDataEmployee">
+            <th scope="row"> {{ employee.id }} </th>
+            <td> {{ employee.employeeName }} </td>
+            <td> {{ employee.employeeSalary }} </td>
+            <td> {{ employee.employeeAnualSalary }} </td>
+            <td> {{ employee.employeeAge }} </td>
+            <td> {{ employee.profileImage }} </td>
+        </tr>
+    </tbody>
+  </table>
