@@ -1,2 +1,5 @@
 <app-nav></app-nav>
-<app-table-employee></app-table-employee>
+<div class="container">
+    <app-input-search (search)="getData($event)"></app-input-search>
+    <app-table-employee [listDataEmployee]="listDataEmployee"></app-table-employee>
+</div>

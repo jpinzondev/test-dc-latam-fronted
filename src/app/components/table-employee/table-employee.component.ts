@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from 'src/app/services/employees/employee.service';
-import { Employee } from 'src/app/models/employee.model';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Employee } from 'src/app/models/employee.model';
 
 @Component({
   selector: 'app-table-employee',
@@ -10,17 +9,14 @@ import { Router } from '@angular/router';
 })
 export class TableEmployeeComponent implements OnInit {
 
-  listDataEmployee:Employee[] | undefined;
+  @Input() listDataEmployee:Employee[] | undefined;
 
   constructor(
-    private service: EmployeeService,
     private router: Router,
   ) {}
 
   ngOnInit(): void {
-    this.service.getAllEmployees().subscribe(data => {
-      this.listDataEmployee = data
-    });
+
   }
 
 }

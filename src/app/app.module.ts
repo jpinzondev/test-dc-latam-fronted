@@ -7,19 +7,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TableEmployeeComponent } from './components/table-employee/table-employee.component';
+import { InputSearchComponent } from './components/input-search/input-search.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    TableEmployeeComponent
+    TableEmployeeComponent,
+    InputSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

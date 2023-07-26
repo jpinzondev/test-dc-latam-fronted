@@ -1,4 +1,6 @@
-<table class="table table-striped">
+<div class="">
+  <h1>Employees</h1>
+  <table class="table table-striped table-hover">
     <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
@@ -13,10 +15,14 @@
         <tr *ngFor="let employee of listDataEmployee">
             <th scope="row"> {{ employee.id }} </th>
             <td> {{ employee.employeeName }} </td>
-            <td> {{ employee.employeeSalary | currency:'COP' }} </td>
-            <td> {{ employee.employeeAnualSalary | currency:'COP' }} </td>
+            <td> {{ employee.employeeSalary | currency:'USD' }} </td>
+            <td> {{ employee.employeeAnualSalary | currency:'USD' }} </td>
             <td> {{ employee.employeeAge }} </td>
             <td> {{ employee.profileImage }} </td>
         </tr>
     </tbody>
   </table>
+  <div *ngIf="listDataEmployee && listDataEmployee.length <= 0">
+    Employee does not exist
+  </div>
+</div>

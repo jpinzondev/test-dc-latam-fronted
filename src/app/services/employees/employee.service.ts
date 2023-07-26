@@ -16,11 +16,10 @@ export class EmployeeService {
   ) { }
 
   getAllEmployees(): Observable<Employee[]> {
-    let direction = this.API_URL + "employees"
-    return this.http.get<Employee[]>(direction)
+    return this.http.get<Employee[]>(`${this.API_URL}employees`)
   }
 
-  getEmployeeById(employeeId: number) {
-    
+  getEmployeeById(id: number) {
+    return this.http.get<Employee>(`${this.API_URL}employees/${id}`)
   }
 }
