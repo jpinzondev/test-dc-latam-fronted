@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class NavComponent  {
 
   activeMenu = false;
-  counter = 0;
 
   constructor(
   ) { }
