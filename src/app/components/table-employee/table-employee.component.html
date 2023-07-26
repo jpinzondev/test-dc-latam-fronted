@@ -13,8 +13,8 @@
         <tr *ngFor="let employee of listDataEmployee">
             <th scope="row"> {{ employee.id }} </th>
             <td> {{ employee.employeeName }} </td>
-            <td> {{ employee.employeeSalary }} </td>
-            <td> {{ employee.employeeAnualSalary }} </td>
+            <td> {{ employee.employeeSalary | currency:'COP' }} </td>
+            <td> {{ employee.employeeAnualSalary | currency: 'COP' }} </td>
             <td> {{ employee.employeeAge }} </td>
             <td> {{ employee.profileImage }} </td>
         </tr>
