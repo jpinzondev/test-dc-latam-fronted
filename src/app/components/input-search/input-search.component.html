@@ -1,0 +1,15 @@
+<form [formGroup]="formSearch" (ngSubmit)="submit()">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" 
+               formControlName="id" placeholder="Employee's Id" 
+               aria-label="Employee's Id" 
+               aria-describedby="basic-addon2"
+        >
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" 
+                    *ngIf="this.formSearch.valid" [disabled]="searchDisable" 
+                    type="submit">Search
+            </button>
+        </div>
+    </div>
+</form>
